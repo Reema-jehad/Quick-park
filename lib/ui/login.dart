@@ -36,7 +36,7 @@ class _loginState extends State<login> {
     // }
 
     return Scaffold(
-      backgroundColor: const Color(0xffF6F2FF),
+      backgroundColor: const Color(0xffffffff),
       body: Container(
         key: _formKey,
         child: SingleChildScrollView(
@@ -48,7 +48,7 @@ class _loginState extends State<login> {
                     decoration: const BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage(
-                              'assets/Screenshot 2023-11-17 174511.png'),
+                              'assets/upper-image.png'),
                           fit: BoxFit.fitWidth,
                           alignment: Alignment.topCenter),
                     ),
@@ -59,7 +59,7 @@ class _loginState extends State<login> {
                     padding: EdgeInsets.fromLTRB(0, 130, 0, 0),
                     child: CircleAvatar(
                       backgroundImage:
-                          AssetImage('assets/Screenshot 2023-11-17 174540.png'),
+                          AssetImage('assets/user.png'),
                       radius: 40,
                     ),
                   ))

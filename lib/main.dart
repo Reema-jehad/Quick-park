@@ -17,7 +17,7 @@ import 'ui/form.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: "/Parking",
+    initialRoute: "/form",
     routes: {
       "/": (context) => const first(),
       "/login": (context) => const login(),

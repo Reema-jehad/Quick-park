@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:quick_park/ui/chatbot.dart';
 
 class Chatbot1 extends StatefulWidget {
   const Chatbot1({super.key});
@@ -27,8 +27,8 @@ class _Chatbot1State extends State<Chatbot1> {
         shadowColor: Colors.transparent,
         actions: [
           IconButton(
-            icon:
-                const Icon(Icons.message_outlined, color: Color(0xffc582ee)), // Message icon
+            icon: const Icon(Icons.message_outlined,
+                color: Color(0xffc582ee)), // Message icon
             onPressed: () {
               // Handle message icon press
             },
@@ -69,7 +69,8 @@ class _Chatbot1State extends State<Chatbot1> {
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: const Color.fromARGB(0, 137, 89, 232).withOpacity(0.80),
+                      color: const Color.fromARGB(0, 137, 89, 232)
+                          .withOpacity(0.80),
                       blurRadius: 4,
                       spreadRadius: -2,
                     ),
@@ -78,20 +79,103 @@ class _Chatbot1State extends State<Chatbot1> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    CircularButton(
-                      image: 'assets/user1.png',
-                      shadowColor: const Color(0x00e3d5ff).withOpacity(0.75),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(100),
+                        boxShadow: [
+                          BoxShadow(
+                            color: const Color(0x00e3d5ff).withOpacity(0.75),
+                            blurRadius: 5,
+                            spreadRadius: 3,
+                            offset: Offset(0, 4),
+                          ),
+                        ],
+                      ),
+                      child: TextButton(
+                        onPressed: () {},
+                        style: ButtonStyle(
+                          overlayColor:
+                              MaterialStateProperty.resolveWith<Color>(
+                                  (states) {
+                            return Colors.transparent;
+                          }),
+                        ),
+                        child: Image(
+                          image: AssetImage('assets/user1.png'),
+                          width: 40, // Adjust the width of the image
+                          height: 52,
+                        ),
+                        // style: ButtonStyle(shadowColor:,),
+                      ),
                     ),
-                    CircularButton(
-                      image: 'assets/home1.png',
-                      shadowColor: const Color(0x00e3d5ff).withOpacity(0.75),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(100),
+                        boxShadow: [
+                          BoxShadow(
+                            color: const Color(0x00e3d5ff).withOpacity(0.75),
+                            blurRadius: 5,
+                            spreadRadius: 3,
+                            offset: Offset(0, 4),
+                          ),
+                        ],
+                      ),
+                      child: TextButton(
+                        onPressed: () {},
+                        style: ButtonStyle(
+                          overlayColor:
+                              MaterialStateProperty.resolveWith<Color>(
+                                  (states) {
+                            return Colors.transparent;
+                          }),
+                        ),
+                        child: Image(
+                          image: AssetImage('assets/home1.png'),
+                          width: 40, // Adjust the width of the image
+                          height: 52,
+                        ),
+                        // style: ButtonStyle(shadowColor:,),
+                      ),
                     ),
-                    CircularButton(
-                      image: 'assets/robotic1.png',
-                      shadowColor: const Color(0x00e3d5ff).withOpacity(0.75),
-                      borderColor: const Color.fromARGB(
-                          255, 174, 73, 231), // Border color as #AE49E7
-                      borderWidth: 2.0,
+                    Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(100),
+                          boxShadow: [
+                            BoxShadow(
+                              color: const Color(0x00e3d5ff).withOpacity(0.75),
+                              blurRadius: 5,
+                              spreadRadius: 3,
+                              offset: Offset(0, 4),
+                            ),
+                          ],
+                          border: Border.all(
+                            color: Color.fromARGB(255, 174, 73, 231),
+                          )),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Chatbot1()),
+                          );
+                        },
+                        style: ButtonStyle(
+                          overlayColor:
+                              MaterialStateProperty.resolveWith<Color>(
+                                  (states) {
+                            return Colors.transparent;
+                          }),
+                        ),
+                        child: Image(
+                          image: AssetImage('assets/robotic1.png'),
+                          width: 35,
+                          height: 52,
+                        ),
+                        // style: ButtonStyle(shadowColor:,),
+                      ),
                     ),
                   ],
                 ),
@@ -122,20 +206,20 @@ class _Chatbot1State extends State<Chatbot1> {
       flex: 3,
       child: Container(
           padding: const EdgeInsets.only(left: 5, right: 5, top: 0, bottom: 5),
-          margin: const EdgeInsets.only(left: 20, right: 20, top: 40, bottom: 20),
+          margin:
+              const EdgeInsets.only(left: 20, right: 20, top: 40, bottom: 20),
           width: double.infinity,
           decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(25)),
-            color: Color(0xfff4f5f7),
+              borderRadius: BorderRadius.all(Radius.circular(25)),
+              color: Color(0xfff4f5f7),
               boxShadow: [
-              BoxShadow(
-                color: Color.fromARGB(255, 196, 194, 194),
-                spreadRadius: 0,
-                blurRadius: 4,
-                offset: Offset(0, 4),
-              )
-            ]
-          ),
+                BoxShadow(
+                  color: Color.fromARGB(255, 196, 194, 194),
+                  spreadRadius: 0,
+                  blurRadius: 4,
+                  offset: Offset(0, 4),
+                )
+              ]),
           child: const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -150,42 +234,51 @@ class _Chatbot1State extends State<Chatbot1> {
 
   Widget _bodyBotton() {
     return Expanded(
-      flex: 1,
-      child: Container(
-          padding: const EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 5),
-          margin: const EdgeInsets.only(left: 40, right: 40, top: 10, bottom: 35),
+        flex: 1,
+        child: Container(
+          padding:
+              const EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 5),
+          margin:
+              const EdgeInsets.only(left: 40, right: 40, top: 10, bottom: 35),
           width: double.infinity,
           decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(25)),
-            color: Color(0xfff4f5f7),
+              borderRadius: BorderRadius.all(Radius.circular(25)),
+              color: Color(0xfff4f5f7),
               boxShadow: [
-              BoxShadow(
-                color: Color.fromARGB(255, 196, 194, 194),
-                spreadRadius: 0,
-                blurRadius: 4,
-                offset: Offset(0, 4),
-              )
-            ]
-          ),
-          child: const Row(
-            children: [
-              Text(
-                'Talk to Parkie',
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black),
-              ),
-              SizedBox(
-                width: 130,
-              ),
-              Icon(
-                Icons.arrow_circle_right,
-                color: Color(0xffcfb8ff),
-              ),
-            ],
-          )),
-    );
+                BoxShadow(
+                  color: Color.fromARGB(255, 196, 194, 194),
+                  spreadRadius: 0,
+                  blurRadius: 4,
+                  offset: Offset(0, 4),
+                )
+              ]),
+          child: TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Chatbot()),
+                );
+              },
+                child: const Row(
+                  children: [
+                    Text(
+                      'Talk to Parkie',
+                      style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black),
+                    ),
+                    SizedBox(
+                      width: 115,
+                    ),
+                    Icon(
+                      Icons.arrow_circle_right,
+                      color: Color(0xffcfb8ff),
+                    ),
+                  ],
+                ),
+              )),
+        );
   }
 
   // 0 = Send
@@ -282,7 +375,11 @@ class Avatar extends StatelessWidget {
   final double size;
   final image;
   final EdgeInsets margin;
-  const Avatar({super.key, this.image, this.size = 50, this.margin = const EdgeInsets.all(0)});
+  const Avatar(
+      {super.key,
+      this.image,
+      this.size = 50,
+      this.margin = const EdgeInsets.all(0)});
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -306,7 +403,8 @@ class ProfileTextField extends StatelessWidget {
   final ImageProvider<Object> image;
   final String hintText;
 
-  const ProfileTextField({super.key, 
+  const ProfileTextField({
+    super.key,
     required this.controller,
     required this.image,
     required this.hintText,
@@ -359,7 +457,8 @@ class CircularButton extends StatelessWidget {
   final Color borderColor;
   final double borderWidth;
 
-  const CircularButton({super.key, 
+  const CircularButton({
+    super.key,
     required this.image,
     required this.shadowColor,
     this.borderColor = Colors.transparent,

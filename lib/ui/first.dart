@@ -9,51 +9,28 @@ class first extends StatefulWidget {
 }
 
 class _firstState extends State<first> {
+    // @override
+  // void initState() {
+  //   super.initState();
+  //   Future.delayed(const Duration(seconds: 2), () {
+  //     Navigator.push(
+  //       context,
+  //       MaterialPageRoute(builder: (context) => const login()),
+  //     );
+  //   });
+  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(color: const Color(0xffA990E1)),
-              ),
-              child: IconButton(
-                // onPressed: () {
-                // _boxLogin.clear();
-                // _boxLogin.put("loginStatus", false);
-                // Navigator.pushReplacement(
-                //   context,
-                // );
-                // },
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const login()),
-                  );
-                },
-                icon: const Icon(
-                  Icons.logout_rounded,
-                  color: Color(0xffA990E1),
-                ),
-              ),
-            ),
-          )
-        ],
-      ),
+      
       body: const Center(
         
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image(
-              image: AssetImage('assets/Screenshot 2024-01-31 083158.png'),
+              image: AssetImage('assets/parking-Icon.png'),
               // width: ,
             ),
             SizedBox(height: 10),

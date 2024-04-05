@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quick_park/ui/chatbot1.dart';
 
 class Chatbot extends StatefulWidget {
   const Chatbot({super.key});
@@ -65,25 +66,107 @@ class _ChatbotState extends State<Chatbot> {
                   ],
                 ),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    CircularButton(
-                      image: 'assets/user1.png',
-                      shadowColor: const Color(0x00e3d5ff).withOpacity(0.75),
-                    ),
-                    CircularButton(
-                      image: 'assets/home1.png',
-                      shadowColor: const Color(0x00e3d5ff).withOpacity(0.75),
-                    ),
-                    CircularButton(
-                      image: 'assets/robotic1.png',
-                      shadowColor: const Color(0x00e3d5ff).withOpacity(0.75),
-                      borderColor: const Color.fromARGB(
-                          255, 174, 73, 231), // Border color as #AE49E7
-                      borderWidth: 2.0,
-                    ),
-                  ],
-                ),
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(100),
+                          boxShadow: [
+                            BoxShadow(
+                              color: const Color(0x00e3d5ff).withOpacity(0.75),
+                              blurRadius: 5,
+                              spreadRadius: 3,
+                              offset: Offset(0, 4),
+                            ),
+                          ],
+                        ),
+                        child: TextButton(
+                          onPressed: () {},
+                          style: ButtonStyle(
+                            overlayColor:
+                                MaterialStateProperty.resolveWith<Color>(
+                                    (states) {
+                              return Colors.transparent;
+                            }),
+                          ),
+                          child: Image(
+                            image: AssetImage('assets/user1.png'),
+                            width: 40, // Adjust the width of the image
+                            height: 52,
+                          ),
+                          // style: ButtonStyle(shadowColor:,),
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(100),
+                          boxShadow: [
+                            BoxShadow(
+                              color: const Color(0x00e3d5ff).withOpacity(0.75),
+                              blurRadius: 5,
+                              spreadRadius: 3,
+                              offset: Offset(0, 4),
+                            ),
+                          ],
+                        ),
+                        child: TextButton(
+                          onPressed: () {},
+                          style: ButtonStyle(
+                            overlayColor:
+                                MaterialStateProperty.resolveWith<Color>(
+                                    (states) {
+                              return Colors.transparent;
+                            }),
+                          ),
+                          child: Image(
+                            image: AssetImage('assets/home1.png'),
+                            width: 40, // Adjust the width of the image
+                            height: 52,
+                          ),
+                          // style: ButtonStyle(shadowColor:,),
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(100),
+                          boxShadow: [
+                            BoxShadow(
+                              color: const Color(0x00e3d5ff).withOpacity(0.75),
+                              blurRadius: 5,
+                              spreadRadius: 3,
+                              offset: Offset(0, 4),
+                            ),
+                          ],
+                          border: Border.all(color: Color.fromARGB(255, 174, 73, 231),)
+                        ),
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Chatbot1()),
+                            );
+                          },
+                          style: ButtonStyle(
+                            overlayColor:
+                                MaterialStateProperty.resolveWith<Color>(
+                                    (states) {
+                              return Colors.transparent;
+                            }),
+                          ),
+                          child: Image(
+                            image: AssetImage('assets/robotic1.png'),
+                            width: 35, 
+                            height: 52,
+                          ),
+                          // style: ButtonStyle(shadowColor:,),
+                        ),
+                      ),
+                    ],
+                  ),
               ),
             ],
           ),

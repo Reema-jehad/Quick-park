@@ -26,7 +26,7 @@ class _signupState extends State<signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffF6F2FF),
+      backgroundColor: const Color(0xffffffff),
       body: Form(
         key: _formKey,
         child: SingleChildScrollView(
@@ -38,7 +38,7 @@ class _signupState extends State<signup> {
                     decoration: const BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage(
-                              'assets/Screenshot 2023-11-17 174511.png'),
+                              'assets/upper-image.png'),
                           fit: BoxFit.fitWidth,
                           alignment: Alignment.topCenter),
                     ),
@@ -49,7 +49,7 @@ class _signupState extends State<signup> {
                     padding: EdgeInsets.fromLTRB(0, 130, 0, 0),
                     child: CircleAvatar(
                       backgroundImage:
-                          AssetImage('assets/Screenshot 2023-11-17 174540.png'),
+                          AssetImage('assets/user.png'),
                       radius: 40,
                     ),
                   ))
@@ -310,16 +310,16 @@ class _signupState extends State<signup> {
                     },
                     child: const Padding(
                       padding: EdgeInsets.fromLTRB(16, 10, 16, 10),
-                      child: Text("Register"),
+                      child: Text("Sign Up"),
                     ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text("Already have an account?"),
+                      const Text("have an account?"),
                       TextButton(
                         onPressed: () => Navigator.pop(context),
-                        child: const Text("Login",
+                        child: const Text("Log In",
                             style: TextStyle(
                               color: Color(0xffA990E1),
                             )),

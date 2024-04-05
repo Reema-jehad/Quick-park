@@ -19,7 +19,7 @@ class _resetState extends State<reset> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffF6F2FF),
+      backgroundColor: const Color(0xffffffff),
       body: Container(
         key: _formKey,
         child: SingleChildScrollView(
@@ -31,7 +31,7 @@ class _resetState extends State<reset> {
                     decoration: const BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage(
-                              'assets/Screenshot 2023-11-17 174511.png'),
+                              'assets/upper-image.png'),
                           fit: BoxFit.fitWidth,
                           alignment: Alignment.topCenter),
                     ),
@@ -42,7 +42,7 @@ class _resetState extends State<reset> {
                     padding: EdgeInsets.fromLTRB(0, 130, 0, 0),
                     child: CircleAvatar(
                       backgroundImage:
-                          AssetImage('assets/Screenshot 2024-01-31 090813.png'),
+                          AssetImage('assets/password-lock.png'),
                       radius: 40,
                     ),
                   ))

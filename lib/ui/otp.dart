@@ -12,7 +12,7 @@ class _OtpState extends State<Otp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffF6F2FF),
+      backgroundColor: const Color(0xffffffff),
       resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Column(
@@ -23,7 +23,7 @@ class _OtpState extends State<Otp> {
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage(
-                            'assets/Screenshot 2023-11-17 174511.png'),
+                            'assets/upper-image.png'),
                         fit: BoxFit.fitWidth,
                         alignment: Alignment.topCenter),
                   ),
@@ -34,7 +34,7 @@ class _OtpState extends State<Otp> {
                     padding: EdgeInsets.fromLTRB(0, 130, 0, 0),
                     child: CircleAvatar(
                       backgroundImage:
-                          AssetImage('assets/Screenshot 2023-11-17 174540.png'),
+                          AssetImage('assets/user.png'),
                       radius: 40,
                     ),
                   ))
@@ -100,10 +100,10 @@ class _OtpState extends State<Otp> {
                         ),
                       ),
                       child: const Padding(
-                        padding: EdgeInsets.fromLTRB(16, 10, 16, 10),
+                        padding: EdgeInsets.fromLTRB(16, 5, 16, 5),
                         child: Text(
                           'Next',
-                          style: TextStyle(fontSize: 20),
+                          style: TextStyle(fontSize: 16),
                         ),
                       ),
                     ),

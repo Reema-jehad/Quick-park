@@ -13,7 +13,7 @@ class Success extends StatelessWidget {
         child: Column(
           children: [
             const Image(
-              image: AssetImage('assets/Screenshot 2024-02-09 203333.png'),
+              image: AssetImage('assets/successfully.png'),
               fit: BoxFit.fitWidth,
             ),
             const SizedBox(
